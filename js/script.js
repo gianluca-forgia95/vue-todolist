@@ -11,12 +11,16 @@ data: {
   'Chiamare amici',
   'Fare il prepartita',
   'Cantare fino al 90esimo',
-  'Parcheggiare vicino lo stadio',
+  'Parcheggiare vicino lo stadio'
   ],
+  newItem: 'ciao',
 
 
    },
    methods: {
+     removeItem: function(index) {
+       this.list.splice(index, 1);
+     }
 
 
    }
