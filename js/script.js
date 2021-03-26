@@ -13,13 +13,16 @@ data: {
   'Cantare fino al 90esimo',
   'Parcheggiare vicino lo stadio'
   ],
-  newItem: 'ciao',
+  newItem: '',
 
 
    },
    methods: {
      removeItem: function(index) {
        this.list.splice(index, 1);
+     },
+     addItem: function() {
+       this.list.push(this.newItem);
      }
 
 

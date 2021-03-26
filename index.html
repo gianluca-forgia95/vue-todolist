@@ -19,11 +19,11 @@
     <div id="root">
     <!-- TodoList -->
       <div class="todo-list">
-        <ol>
+        <ol v-if='list.length > 0'>
           <li v-for='(item, index) in list'>{{item}}<span @click="removeItem(index)"><i class="cross fas fa-times"></i></span></li>
         </ol>
         <input type="text" name="" value="" v-model='newItem'>
-        <button>Submit</button>
+        <button @click='addItem'>Submit</button>
 
       </div>
    <!-- /TodoList -->
