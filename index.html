@@ -33,15 +33,18 @@
     <!-- TodoList -->
       <div class="todo-list">
 
-
+  <!-- List Items -->
         <ol v-if='list.length > 0'>
           <li v-for='(item, index) in list'>{{item}}<span @click="removeItem(index)"><i class="delete cross fas fa-times"></i></span></li>
         </ol>
+  <!-- /List Items -->
+  <!-- Submit input and button -->
         <div class="insert-item">
           <label class="lbl" for="">Add TodoThings</label>
           <input class="submit" type="text" placeholder="Write here" name="" value="" v-model='newItem' @keyup.13='addItem'>
           <button class="btn-submit" @click='addItem'>Submit</button>
         </div>
+  <!-- /Submit input and button -->
 
 
       </div>

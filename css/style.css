@@ -20,6 +20,7 @@ body {
 }
 .title {
   padding: 40px 0;
+  color: #13436A;
 }
 
 .logo img {
@@ -29,29 +30,36 @@ body {
   list-style: none;
   display: flex;
   justify-content: center;
-
+}
+.todo-list li {
+  color: #13436A;
+  font-weight: bold;
 }
 .delete {
   margin-left: 5px;
   color: red;
   font-size: 14px;
 }
+
+.insert-item {
+  align-self: flex-start;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ margin-left: 50px;
+ flex-wrap: nowrap;
+}
 .lbl {
   font-size: 17px;
   font-weight: bold;
   color: #fff;
   margin: auto;
-}
-.insert-item {
- display: flex;
- flex-direction: column;
- justify-content: center;
- margin-left: 50px;
+  padding: 4px;
 }
 .submit {
   margin-bottom: 20px;
   border-radius: 5px;
-  padding: 5px;
+  padding: 7px;
   background-color: #0DF365;
   border: 2px solid #13436A;
 }
