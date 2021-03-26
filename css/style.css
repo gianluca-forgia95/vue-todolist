@@ -4,10 +4,74 @@
   box-sizing: border-box;
 }
 #root {
-  width: 1000px;
+  width: 900px;
+  height: 100vh;
   margin: auto;
+}
+body {
+   font-family: 'Noto Sans SC', sans-serif;
+   background: rgb(58,180,98);
+   background: linear-gradient(90deg, rgba(58,180,98,1) 19%, rgba(29,253,152,1) 89%, rgba(69,233,252,1) 100%);
+}
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.title {
+  padding: 40px 0;
+}
+
+.logo img {
+  width: 50px;
+}
+.todo-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
 
 }
-.todolist {
-  list-style: none;
+.delete {
+  margin-left: 5px;
+  color: red;
+  font-size: 14px;
+}
+.lbl {
+  font-size: 17px;
+  font-weight: bold;
+  color: #fff;
+  margin: auto;
+}
+.insert-item {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ margin-left: 50px;
+}
+.submit {
+  margin-bottom: 20px;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #0DF365;
+  border: 2px solid #13436A;
+}
+.btn-submit {
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #13436A;
+  color: #0DF365;
+  border: 2px solid #13436A;
+  font-size: 16px;
+  font-weight: bold;
+
+}
+.submit , .btn-submit {
+  cursor: pointer;
+
+}
+.submit:focus , .btn-submit:focus {
+  outline: none;
+}
+.delete {
+  cursor: pointer;
 }

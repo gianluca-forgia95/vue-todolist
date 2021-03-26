@@ -2,6 +2,10 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- /Google Font -->
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
     <!-- /FontAwesome -->
@@ -17,13 +21,28 @@
 
   <!-- VueJs Root -->
     <div id="root">
+     <header class="top-section">
+       <div class="title">
+         <h1>Vuejs ToDoList</h1>
+       </div>
+       <div class="logo">
+         <img src="img/vuejs-logo.png" alt="logo">
+       </div>
+     </header>
+
     <!-- TodoList -->
       <div class="todo-list">
+
+
         <ol v-if='list.length > 0'>
-          <li v-for='(item, index) in list'>{{item}}<span @click="removeItem(index)"><i class="cross fas fa-times"></i></span></li>
+          <li v-for='(item, index) in list'>{{item}}<span @click="removeItem(index)"><i class="delete cross fas fa-times"></i></span></li>
         </ol>
-        <input type="text" name="" value="" v-model='newItem'>
-        <button @click='addItem'>Submit</button>
+        <div class="insert-item">
+          <label class="lbl" for="">Add TodoThings</label>
+          <input class="submit" type="text" placeholder="Write here" name="" value="" v-model='newItem' @keyup.13='addItem'>
+          <button class="btn-submit" @click='addItem'>Submit</button>
+        </div>
+
 
       </div>
    <!-- /TodoList -->

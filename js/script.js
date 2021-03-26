@@ -8,10 +8,12 @@ var root = new Vue({
 el: '#root',
 data: {
   list: [
-  'Chiamare amici',
-  'Fare il prepartita',
-  'Cantare fino al 90esimo',
-  'Parcheggiare vicino lo stadio'
+  'Studiare VueJs',
+  'Aprire Atom',
+  'Includere la cdn di vue',
+  'Scrivere Html + CSS',
+  'Far Funzionare la TodoList',
+  'Curare lo stile'
   ],
   newItem: '',
 
@@ -22,7 +24,11 @@ data: {
        this.list.splice(index, 1);
      },
      addItem: function() {
-       this.list.push(this.newItem);
+       if ( this.newItem !== '' ) {
+         this.list.push(this.newItem);
+         this.newItem = '';
+       }
+
      }
 
 
